@@ -357,7 +357,7 @@ dev_tools = false
 
 [pregnancy]
   # cooldown for cats getting pregnant that applies after giving birth
-  birth_cooldown = 6
+  birth_cooldown = 12
 
   # 1/chance that kits, relationship and other factors will influence this chance
   primary_chance_mated = 80
@@ -466,8 +466,8 @@ dev_tools = false
   # number / total for each control
 
   kittypet = [30, 50, 10, 10]
-  loner = [5, 15, 50, 30]
-  rogue = [3, 7, 35, 55]
+  loner = [15, 15, 40, 30]
+  rogue = [13, 7, 35, 45]
 
   # set to True to always use English names instead of the localized version
   always_use_english = false
@@ -487,7 +487,7 @@ dev_tools = false
   baby_modifier = -20
 
   # modifies accessory chance based on if cat is a senior or senior adult
-  elder_modifier = 20
+  elder_modifier = -20
 
   # modifies accessory chance based on if cat has "happy" traits
   happy_trait_modifier = -30
@@ -499,11 +499,11 @@ dev_tools = false
   ceremony_modifier = -20
 
   # modifies accessory chance based on if cat already has at least one other accessory
-  multiple_acc_modifier = 50
+  multiple_acc_modifier = 20
 
 [transition_related]
   # base 1/chance that a cat will trans their gender
-  base_trans_chance = 256
+  base_trans_chance = 200
 
   # modifiers for transitioning add or subtract from chance IN THE DENOMINATOR 
   #   i.e. 1/(chance + adolescent_modifier + older_modifier)
@@ -513,7 +513,7 @@ dev_tools = false
   adolescent_modifier = -128
 
   # modifies transition chance based on if cat is an adult or older
-  older_modifier = 256
+  older_modifier = 0
 
 [fading]
   # age that a cat will complete fading
@@ -626,7 +626,7 @@ dev_tools = false
   max_leader_lives = 9
 
   # base 1/chance that leader will die
-  leader_death_chance = 50
+  leader_death_chance = 25
 
   # base 1/chance a cat will die
   classic_death_chance = 500
@@ -650,10 +650,10 @@ dev_tools = false
   [death_related.murder]
     # base 1/2^(chance) a completely random murder occurs
     # aggression and instability will make the denominator lower and increase chance of murder
-    base_random_murder_chance = 25
+    base_random_murder_chance = 20
 
     # base 1/chance a disliked cat will be murdered
-    base_murder_kill_chance = 80
+    base_murder_kill_chance = 60
 
     # The higher this number, the more likely a deputy will murder their leader.
     # note that this doesn't make the deputy more likely to murder in general
@@ -681,7 +681,7 @@ dev_tools = false
   injury_chance = 250
 
   # 1/chance a cat will get a permanent condition from an event with that possibility 
-  permanent_condition_chance = 15
+  permanent_condition_chance = 12.5
 
   # modifiers for injury chance based on if a war is going badly
   # SUBTRACTS from the denominator so higher = more likely to get injured
@@ -689,7 +689,7 @@ dev_tools = false
 
 [clan_creation]
   # Set this to -1 for it to be infinite
-  rerolls = 3
+  rerolls = -1
 
   # other clans will start with a random relation between the two numbers
   starting_clan_relation = [8, 12]
@@ -706,9 +706,9 @@ dev_tools = false
     medicine_cat = true
 
   [clan_creation.rank_weights]
-    newborn = 0
+    newborn = 1
     kitten = 1
-    apprentice = 1
+    apprentice = 2
     warrior = 2
     elder = 1
 
@@ -716,7 +716,7 @@ dev_tools = false
   [clan_creation.valid_rank_to_age_assignment]
     leader = ["young adult", "adult", "senior adult", "senior"]
     deputy = ["young adult", "adult", "senior adult", "senior"]
-    "medicine cat" = ["young adult", "adult", "senior adult", "senior"]
+    "medicine cat" = ["adolescent", "young adult", "adult", "senior adult", "senior"]
     member = ["newborn", "kitten", "adolescent", "young adult", "adult", "senior adult", "senior"]
 
 [ranks]
