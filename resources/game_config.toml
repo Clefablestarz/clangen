@@ -435,7 +435,7 @@ dev_tools = false
 
 [cat_generation]
   # base 1/chance that a cat will generate with a permanent condition. gets modified further in code
-  base_permanent_condition = 90
+  base_permanent_condition = 40
 
   # 1/2^(chance - 1) that a male cat will be a tortie
   base_male_tortie = 13
@@ -679,7 +679,7 @@ dev_tools = false
   [death_related.murder]
     # base 1/2^(chance) a completely random murder occurs
     # aggression and instability will make the denominator lower and increase chance of murder
-    base_random_murder_chance = 20
+    base_random_murder_chance = 40
 
     # base 1/chance a disliked cat will be murdered
     base_murder_kill_chance = 60
